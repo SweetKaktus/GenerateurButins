@@ -67,7 +67,7 @@ function looter(categorieChoisie, nombreAdversaires) {
 			if (j === 0) {console.log("Premier loot :");}
 			else {console.log("Second loot : ");}
 			
-			let roll_dice = getRandomInt(100); // Ce dé est tiré pour la rareté du loot
+			let roll_dice = getRandomInt(100)+1; // Ce dé est tiré pour la rareté du loot
 			let ma_rarete = roll_dice <= 60 ? echelleRarete.find(r => roll_dice <= r.chance).label : "pas de loot !"; // La rareté finale
 			console.log("Resultat Dé", roll_dice); // Contrôle résultat dé pour vérifier la cohérence avec la suite de l'algo
 			console.log("Meilleure rareté", ma_rarete); // Contrôle de la concordance du nv de rareté avec le dice result

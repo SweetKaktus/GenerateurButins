@@ -1,0 +1,31 @@
+A ce jour j'ai terminé de créer mon algo de générateur de loot.
+J'ai une table des loot possibles contenant les données suivantes:
+ID ; CATEGORIE ; NOM ; NIVEAU DE RARETÉ
+
+J'ai un algorithme qui tire aléatoirement plusieurs items pour générer un loot en fonction de la catégorie des ennemis
+affrontés ainsi que le nombre d'adversaires.
+
+Il me reste à créer les éléments d'interface qui me permettront de choisir les catégories et le nombre d'adversaires
+pour ensuite générer le butin.
+
+J'aimerai avec cela avoir une illustration pour chaque item, à voir si je fais cela avec l'IA, si je dessine moi-même ou si je demande
+à un collègue illustrateur s'il souhaite participer au projet
+
+
+J'ai organisé ma page HTML de la manière suivante: 
+Une section main
+A l'intérieur de cette section main j'ai:
+Une section Présentation
+Une section Saisie utilisateur
+Une section Affichage du loot
+
+Je dois via mon code javascript accéder au select du choix de catégorie pour l'agrémenter dynamiquement avec toutes les catégories possibles
+Je dois également accéder au form pour annuler le comportement submit par défaut
+Une fois le formulaire rempli, si l'user appuie sur "Générer le butin" je dois afficher un tableau contenant
+le nom de chaque item ainsi que son niveau de rareté, éventuellement pour le niveau de rareté je peux jouer sur un
+effet de couleur et si je me chauffe, sur une animation
+
+Avant toute chose j'aimerai séparer mon générateur de loot du script principal pour ne garder sur le script principal
+que la partie liée à l'accès au DOM et au tirage en me servant des éléments importés depuis un autre fichiers
+
+Je dois me renseigner sur la manipulation du DOM ainsi que sur la séparation du code en différents "modules"
