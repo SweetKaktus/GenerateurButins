@@ -29,3 +29,5 @@ Avant toute chose j'aimerai séparer mon générateur de loot du script principa
 que la partie liée à l'accès au DOM et au tirage en me servant des éléments importés depuis un autre fichiers
 
 Je dois me renseigner sur la manipulation du DOM ainsi que sur la séparation du code en différents "modules"
+
+Il faut que je crée une fonction pour mettre en majuscule la première lettre d'un mot.
