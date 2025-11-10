@@ -30,4 +30,12 @@ que la partie liée à l'accès au DOM et au tirage en me servant des éléments
 
 Je dois me renseigner sur la manipulation du DOM ainsi que sur la séparation du code en différents "modules"
 
-Il faut que je crée une fonction pour mettre en majuscule la première lettre d'un mot.
+Il faut que je crée une fonction pour mettre en majuscule la première lettre d'un mot. => DONE
+
+Pour rendre mon code plus scalable il faut que je gère l'affichage des nom du tableau en fonction du type de toutes les clés d'objets 
+disponibles dans ma table "butins". Par exemple je pourrai simplement me baser sur le nom des colonnes de ma table "butins" pour
+générer dynamiquement mes colonnes du tableau que je génère plutôt que de générer le nom des colonnes en dur. => DONE
+
+Je souhaite améliorer mon code en permettant d'inscrire les éléments du tableau (nom, rareté, icone) en fonction du nom de la variable
+pour y insérer directement dans la bonne colonne en fonction des noms de colonne du tableau.
+Je dois prendre un temps dédié pour voir comment faire car pour le moment je n'en ai aucune idée...

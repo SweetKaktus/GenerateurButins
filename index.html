@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Générateur de butins</title>
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
@@ -18,11 +22,11 @@
         </section>
         <section class="saisieUser">
             <form action="">
-                <label for="chooseCat">Choisissez la catégorie d'adversaire <br></label>
+                <label for="chooseCat">Choisissez la catégorie d'adversaire</label>
                 <select name="chooseCat" id="chooseCat">
                     <option value="">-- Choisissez une catégorie d'adversaire --</option>
                 </select>
-                <label for="enemyNumber">Choisissez le nombre d'adversaire <br></label>
+                <label for="enemyNumber">Choisissez le nombre d'adversaire</label>
                 <input type="text" name="enemyNumber" id="enemyNumber">
                 <button type="button" id="generateLoot">Générer le loot !</button>
             </form>

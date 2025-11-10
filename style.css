@@ -1,0 +1,353 @@
+/* CODE CSS GÉNÉRÉ PAR CLAUDE AI - CSS EN DEHORS DE MES OBJECTIFS PEDAGOGIQUES ACTUELS */
+
+/* === VARIABLES === */
+:root {
+    --bois-fonce: #2a1810;
+    --bois-moyen: #3d2817;
+    --parchemin: #f4e8d0;
+    --parchemin-ombre: #d4c4a8;
+    --or: #d4af37;
+    --or-fonce: #b8941f;
+    --rouge-taverne: #8b1a1a;
+    --texte-sombre: #1a0f0a;
+    
+    /* Couleurs de rareté */
+    --commun: #9e9e9e;
+    --rare: #4a90e2;
+    --epic: #9b59b6;
+    --legendaire: #f39c12;
+}
+
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Metamorphous', cursive;
+    background: linear-gradient(to bottom, var(--bois-moyen) 0%, var(--bois-fonce) 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--texte-sombre);
+}
+
+/* === CONTENEUR PRINCIPAL === */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(42, 24, 16, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--or-fonce);
+}
+
+/* === SECTION PRÉSENTATION === */
+.presentation {
+    background: var(--parchemin);
+    padding: 25px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.05);
+    border: 3px solid var(--or-fonce);
+    position: relative;
+}
+
+.presentation::before,
+.presentation::after {
+    content: '⚔';
+    position: absolute;
+    top: 15px;
+    font-size: 20px;
+    color: var(--or-fonce);
+}
+
+.presentation::before {
+    left: 15px;
+}
+
+.presentation::after {
+    right: 15px;
+}
+
+.presentation h1 {
+    text-align: center;
+    color: var(--rouge-taverne);
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.presentation p {
+    text-align: center;
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--texte-sombre);
+}
+
+/* === SECTION SAISIE UTILISATEUR === */
+.saisieUser {
+    background: var(--parchemin);
+    padding: 25px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--parchemin-ombre);
+}
+
+.saisieUser form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.saisieUser label {
+    font-size: 1.1em;
+    color: var(--texte-sombre);
+    font-weight: bold;
+}
+
+.saisieUser select,
+.saisieUser input[type="text"] {
+    padding: 12px;
+    font-family: 'Metamorphous', cursive;
+    font-size: 1em;
+    border: 2px solid var(--or-fonce);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--texte-sombre);
+    transition: all 0.3s ease;
+}
+
+.saisieUser select:focus,
+.saisieUser input[type="text"]:focus {
+    outline: none;
+    border-color: var(--or);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.saisieUser button {
+    padding: 15px 30px;
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.1em;
+    font-weight: bold;
+    background: linear-gradient(to bottom, var(--or) 0%, var(--or-fonce) 100%);
+    color: var(--bois-fonce);
+    border: 3px solid var(--or-fonce);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+.saisieUser button:hover {
+    background: linear-gradient(to bottom, #e6c04c 0%, var(--or) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.saisieUser button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* === SECTION AFFICHAGE LOOT === */
+.affichageLoot {
+    background: var(--parchemin);
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--parchemin-ombre);
+    min-height: 100px;
+}
+
+/* === TABLEAU === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+    background: linear-gradient(to bottom, var(--bois-moyen) 0%, var(--bois-fonce) 100%);
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    color: var(--or);
+    font-size: 1.1em;
+    border-bottom: 2px solid var(--or-fonce);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--parchemin-ombre);
+    color: var(--texte-sombre);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Colonne des icônes */
+td:first-child {
+    width: 50px;
+    text-align: center;
+}
+
+/* Colonne rareté avec couleurs */
+td:last-child {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+/* Couleurs de rareté dynamiques */
+tbody tr td:last-child {
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* Classes pour les raretés (à ajouter via JS si besoin) */
+.commun {
+    color: var(--commun);
+    background-color: rgba(158, 158, 158, 0.1);
+}
+
+.rare {
+    color: var(--rare);
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+.epic {
+    color: var(--epic);
+    background-color: rgba(155, 89, 182, 0.1);
+}
+
+.legendaire {
+    color: var(--legendaire);
+    background-color: rgba(243, 156, 18, 0.1);
+}
+
+/* === RESPONSIVE === */
+
+/* Tablettes */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+    
+    .presentation h1 {
+        font-size: 1.6em;
+    }
+    
+    .presentation p {
+        font-size: 0.95em;
+    }
+    
+    th, td {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .presentation {
+        padding: 20px 15px;
+    }
+    
+    .presentation::before,
+    .presentation::after {
+        font-size: 16px;
+        top: 10px;
+    }
+    
+    .presentation::before {
+        left: 10px;
+    }
+    
+    .presentation::after {
+        right: 10px;
+    }
+    
+    .presentation h1 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+    
+    .presentation p {
+        font-size: 0.9em;
+    }
+    
+    .saisieUser {
+        padding: 15px;
+    }
+    
+    .saisieUser label {
+        font-size: 1em;
+    }
+    
+    .saisieUser button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    
+    .affichageLoot {
+        padding: 15px;
+        overflow-x: auto;
+    }
+    
+    table {
+        font-size: 0.85em;
+    }
+    
+    th {
+        padding: 10px 8px;
+        font-size: 0.95em;
+    }
+    
+    td {
+        padding: 8px;
+    }
+    
+    td:first-child {
+        width: 40px;
+    }
+}
