@@ -3,14 +3,17 @@
 
 // Ma table de raretés avec le rapport à la valeur du lancé de dé
 export let echelleRarete = [
-	{label : "epic", chance : 1},
-	{label : "legendaire", chance : 9},
+	{label : "legendaire", chance : 1},
+	{label : "epic", chance : 9},
 	{label : "rare", chance : 33},
 	{label : "commun", chance : 60},
 ];
 
 export function getRandomInt(max) {
-	return Math.floor(Math.random() * max);
+    let arr = new Uint32Array(1);
+	window.crypto.getRandomValues(arr);
+	let randomValue = arr[0] % max; 
+    return randomValue;	
 }
 
 export function capitalizeFirstLetterInWord(word) {
